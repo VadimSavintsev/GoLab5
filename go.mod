@@ -1,3 +1,3 @@
-module example.com/LAB_5
+module github.com/VadimSavintsev/GoLab5
 
 go 1.23.3
