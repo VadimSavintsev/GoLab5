@@ -5,6 +5,13 @@ type Mutex struct {
 	done  chan struct{}
 }
 
+func New(count int) *Mutex {
+	return &Mutex{
+		Count: count,
+		done:  make(chan struct{}, count),
+	}
+}
+
 func (m *Mutex) Unlock() {
 	m.done <- struct{}{}
 }
